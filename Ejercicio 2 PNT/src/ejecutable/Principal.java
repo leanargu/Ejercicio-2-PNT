@@ -9,30 +9,6 @@ import productosDerivados.*;
 
 public class Principal {
 	
-	public static void imprimirLista(List<Producto> lista) {
-		imprimirListaCompleta(lista);
-		System.out.println("\n=============================\n");
-		obtenerMasCaroYMasBarato(ordenarLista(lista));
-	}
-
-	public static List<Producto> ordenarLista(List<Producto> lista) {
-		Collections.sort(lista);
-		Collections.reverse(lista);
-		return lista;
-	}
-	
-	public static void imprimirListaCompleta(List<Producto> lista) {
-		for(Producto p : lista) {
-			System.out.println(p.toString());
-		}
-	}
-	
-	public static void obtenerMasCaroYMasBarato(List<Producto> listaOrdenada) {
-		int masCaro = 0;
-		int masBarato = listaOrdenada.size()-1;
-		System.out.println("Producto más caro: " + listaOrdenada.get(masCaro).getNombre() + "\nProducto más barato: " + listaOrdenada.get(masBarato).getNombre());
-	}
-	
 	public static void main(String[] args) {
 		ArrayList<Producto> listaDeProductos = new ArrayList<Producto>();
 		
@@ -44,5 +20,32 @@ public class Principal {
 		imprimirLista(listaDeProductos);
 		
 	}
+	
+	private static void imprimirLista(List<Producto> lista) {
+		imprimirListaCompleta(lista);
+		System.out.println("\n=============================\n");
+		obtenerMasCaroYMasBarato(ordenarLista(lista));
+	}
+
+	private static List<Producto> ordenarLista(List<Producto> lista) {
+		Collections.sort(lista);
+		Collections.reverse(lista);
+		return lista;
+	}
+	
+	private static void imprimirListaCompleta(List<Producto> listaDeProductos) {
+		for(Producto productoActual : listaDeProductos) {
+			System.out.println(productoActual);
+			System.out.println("asd");
+		}
+	}
+	
+	private static void obtenerMasCaroYMasBarato(List<Producto> listaOrdenada) {
+		int masCaro = 0;
+		int masBarato = listaOrdenada.size()-1;
+		System.out.println("Producto más caro: " + listaOrdenada.get(masCaro).getNombre() + "\nProducto más barato: " + listaOrdenada.get(masBarato).getNombre());
+	}
+	
+
 	
 }
