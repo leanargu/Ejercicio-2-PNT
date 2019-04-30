@@ -6,7 +6,6 @@ public abstract class Producto implements Comparable<Producto>{
 	private double precio;
 	
 	public Producto(String nombreNuevo, double precioNuevo) {
-		super();
 		this.nombre = nombreNuevo;
 		this.precio = precioNuevo;
 	}
@@ -17,16 +16,8 @@ public abstract class Producto implements Comparable<Producto>{
 		return nombre;
 	}
 
-	public void setNombre(String nombre) {
-		this.nombre = nombre;
-	}
-
 	public double getPrecio() {
 		return precio;
-	}
-
-	public void setPrecio(double precio) {
-		this.precio = precio;
 	}
 	
 	public int compareTo(Producto productoComparable) {

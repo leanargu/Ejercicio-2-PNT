@@ -36,7 +36,6 @@ public class Principal {
 	private static void imprimirListaCompleta(List<Producto> listaDeProductos) {
 		for(Producto productoActual : listaDeProductos) {
 			System.out.println(productoActual);
-			System.out.println("asd");
 		}
 	}
 	
